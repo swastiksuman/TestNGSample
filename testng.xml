@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG Flipkart" parallel="tests" thread-count="1">
+	    
+		<test name="Login test">
+		    <parameter name ="browser" value = "firefox"/>
+		    <classes>
+		        <class name="com.page.objects.Homepage" />
+		        	<methods>
+		        		<include name="doSalesEvent"></include>
+		        	</methods>
+		    </classes>
+		</test>
+	    
+		<test name="Login test1">
+		    <parameter name ="browser" value = "firefox"/>
+		    <classes>
+		        <class name="com.page.objects.Login">
+		        	<methods>
+		         		<include name="doLogin"/>
+		         		<include name="navigateToLogin"/>
+		         	</methods>	
+		        </class>
+		    </classes>
+		</test>	
+		    			
+</suite>
